@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    
+
+<h:head>
+
+<style>
+
+#principal{
+    
+    float:right ;
+    width: 600px;
+    height: 260px;
+    border: 2px solid #6495ED;
+    padding: 45px;
+    margin-top: 150px;
+    text-align: left;
+    font-family: calibri;
+    font-size: 13px;
+    border-radius: 50px;
+}
+
+#msg1 
+ {
+    float: left;
+    padding: 7px;
+    font-family: Cambria;
+    font-size: 31px;
+    color: #6495ED;
+    text-align: left;
+ }
+ #msg2 
+ {
+    float: left;
+    padding: 16px;
+    font-family: calibri;
+    color: #6495ED;
+    font-size: 15px;
+    text-align: left;
+ }
+</style>
+
+<title>Facelet Title</title>
+
+</h:head>
+
+<h:body>
+
+ <div id="principal">
+<p:layout style="min-width:10px;min-height:50px;" id="layout">  
+    <p:layoutUnit position="west" resizable="true" size="800" minSize="300">  
+        <div id="msg1">
+            Seja Bem vindo
+        </div><br/>
+        <div id="msg2">
+            Identifique-se por favor para utilizar
+            o sistema.
+        </div><br/>
+        <h:panelGrid columns="2">
+        <h:outputLabel value="Usuário:" for="nome" />
+        <h:inputText id="nome" label="Nome" value="#{usuarioBean.nome}"  required="true"  />
+        <h:outputLabel value="Senha:" for="senha" />
+        <h:inputSecret id="senha" label="Senha" value="#{usuarioBean.senha}" required="true" />
+        </h:panelGrid><br/> 
+        <h:commandButton action="#{usuarioBean.salvar}" value="Logar" /><br/>
+        <div id="msg2">
+            Esqueceu sua senha?
+            <h:commandLink action="inicio" value="Enviar Senha"/>
+        </div><br/>
+    </p:layoutUnit>
+
+    <p:layoutUnit position="center" resizable="true" size="20" minSize="15">  
+    </p:layoutUnit>  
+</p:layout>
+</div>
+
+</h:body>
+
+</html>

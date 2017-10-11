@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Menus | Plain Menu</title>
+        
+        <link rel="stylesheet" href="../resources/css/style.css" type="text/css" />
+    </h:head>
+    <h:body>
+        
+        <p:fieldset legend="PAINEL DE CONTROLE CLUBE DE DESBRAVADORES">    
+            <h:form>
+                <p:growl id="message" showDetail="true"/>
+                <p:menu>
+                    <p:submenu label="Parâmetros">
+                        <p:menuitem value="Estados do Brasil" url="estado.xhtml" update="message" icon="ui-icon-disk" />
+                        <p:menuitem value="Cidades" url="cidade.xhtml" update="message" icon="ui-icon-disk" />
+                        <p:menuitem value="Sexo" url="sexo.xhtml" update="message" icon="ui-icon-clipboard" />
+                        <p:menuitem value="Unidades" url="unidade.xhtml" update="message" icon="ui-icon-circle-plus" />
+                        <p:menuitem value="Cargos" url="cargo.xhtml" update="message" icon="ui-icon-contact"/>
+                        <p:menuitem value="Distintivos" url="distintivo.xhtml" update="message" icon="ui-icon-circle-check"/>
+                    </p:submenu>
+                    <p:submenu label="Geral">
+                        <p:menuitem value="Desbravador" url="desbravador.xhtml" update="message" ajax="false" icon="ui-icon-person"/>
+                        <p:menuitem value="Meus Distintivos" url="meuDistintivo.xhtml" update="message" ajax="false" icon="ui-icon-star"/>
+                        <p:menuitem value="Vídeos" url="videos.xhtml" update="message" ajax="false" icon="ui-icon-video"/>
+                    </p:submenu>
+                    <p:submenu label="Configurações">
+                        <p:menuitem value="Permissões de acesso" url="sexo.xhtml" icon="ui-icon-locked"/>
+                        <p:menuitem value="Controle de Usuários" url="https://www.facebook.com/luizzlcs" icon="ui-icon-person"/>
+                        <p:menuitem value="Log Off" url="index.xhtml" icon="ui-icon-power"/>
+                        <p:menuitem value="Info" url="https://www.facebook.com/luizzlcs" icon="ui-icon-info"/>
+                    </p:submenu>
+                </p:menu>
+                
+            </h:form>
+        </p:fieldset>
+        @SENAC - Alecrim
+    </h:body>
+</html>
