@@ -3,11 +3,11 @@ package com.desb.controller;
 import com.desb.DAO.CargoDAO;
 import com.desb.model.Cargo;
 import java.util.List;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
+import javax.inject.Named;
+import javax.faces.view.ViewScoped;
 
 @ViewScoped
-@ManagedBean(name = "cargoBean")
+@Named("cargoBean")
 public class CargoBean {
 
     private Cargo cargo = new Cargo();

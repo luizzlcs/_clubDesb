@@ -3,11 +3,11 @@ package com.desb.controller;
 import com.desb.DAO.EstadoDAO;
 import com.desb.model.Estado;
 import java.util.List;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
+import javax.inject.Named;
+import javax.faces.view.ViewScoped;
 
 @ViewScoped
-@ManagedBean(name = "estadoBean")
+@Named("estadoBean")
 public class EstadoBean {
 
     private Estado estado = new Estado();

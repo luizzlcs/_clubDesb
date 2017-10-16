@@ -1,0 +1,15 @@
+*{margin:0;
+ padding:0;
+}
+#container{
+    margin: 0px auto 0px auto;
+    width: 500px;
+    height: 500px;
+    
+}
+#cabecalho{
+    margin: 0px auto 0px auto;
+    width: 500px;
+    height: 500px;
+    background-color: #6495ED;
+}
